@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Darker background for better contrast */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  /* Soft shadow for depth */
+}
+.container.dark{
+  background-color: hsl(207, 26%, 17%);
+  border-radius:0px;
+}
+
+.div1 {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  /* Start outside the container */
+  height: 100%;
+  width: 20%;
+  /* Covers the container width */
+  background: linear-gradient(rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 70%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-20deg);
+  /* Adds a diagonal effect */
+  animation: shimmer 2s ease-in-out infinite;
+  filter: blur(5px);
+  /* Softens the shimmer */
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+    /* Start way outside the container */
+  }
+
+  100% {
+    left: 100%;
+    /* Move across the container */
+  }
+}
