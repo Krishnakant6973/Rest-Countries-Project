@@ -95,6 +95,7 @@ header h2 {
 }
 
 header p {
+    cursor: pointer;
     font-weight: 600;
 }
 

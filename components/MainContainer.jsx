@@ -59,7 +59,7 @@ export default function MainContainer() {
             }
             );
             setFilteredData(data);
-        }, 300, countriesData, query);
+        }, 100, countriesData, query);
         return () => { clearTimeout(id) };
     }, [query, countriesData]);
 
