@@ -36,7 +36,7 @@ export default function MainContainer() {
     const [isDark] = useContext(ThemeContext)
 
     useEffect(() => {
-        makeRequest("https://restcountries.com/v3.1/all")
+        makeRequest("https://restcountries.com/v3.1/independent")
             .then(res => {
                 if (res) {
                     setCountriesData(res)
@@ -71,7 +71,7 @@ export default function MainContainer() {
     const onChangeHandler = useCallback(
         (e) => {
             if (e.target.value === "") {
-                makeRequest("https://restcountries.com/v3.1/all")
+                makeRequest("https://restcountries.com/v3.1/independent")
                     .then(res => {
                         if (res) {
                             setCountriesData(res)
